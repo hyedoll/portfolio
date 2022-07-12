@@ -1,0 +1,738 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@font-face {
+    font-family: 'SuseongDotum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+
+
+body{
+    position: relative;
+}
+
+/* header */
+header{
+    width: 1920px;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;    
+}
+
+.subBox{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: none;
+}
+
+.hWrap{
+    width: 1320px;
+    height: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    padding-top: 25px;
+}
+
+.gnb{
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    color: #fff;
+}
+
+.gnb li{
+    font-size: 20px;
+    font-family: 'SuseongDotum';
+    margin-left: 31px;
+    margin-right: 31px;
+}
+
+.gnb li:last-child{
+    margin-right: 0;
+}
+
+
+
+.gnb>li{
+    position: relative;
+}
+
+
+.gnb>li:last-child:hover a{
+    color: #86cff0;
+}
+
+.sub{
+    width: 200px;
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sub li{
+    padding-bottom: 10px;
+    font-family: Pretendard;
+    font-size: 16px;
+}
+
+.sub>li{
+    padding-top: 10px;
+}
+
+
+
+
+.hWrap .util{
+    display: flex;
+    position: absolute;
+    top: 24px;
+    right: 0;
+    color: #fff;
+}
+
+.hWrap .util li{
+    font-size: 14px;
+    margin-left: 12px;
+    
+}
+
+.hWrap .util li::after{
+    content: '|';
+    color: #fff;
+    padding-left: 12px;
+}
+
+.hWrap .util li:last-child:after{
+    content: none;
+}
+
+
+
+
+/* 아쿠아리움 메인 사진 */
+main{
+    background-image: url(../images/background.png);
+    background-position: center 0;
+    background-size: cover  ;
+    background-repeat: no-repeat;
+    padding-bottom: 113px;
+}
+
+
+
+
+
+/* booking */
+
+.bookContainer .shadow{
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.booking{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    position: fixed;
+    z-index: 999;
+    overflow: hidden;
+    border-radius: 6px;
+    z-index: 5;
+}
+
+.booking .con{
+    width: 900px;
+    height: 90px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.booking .box:first-child{
+    width: 25%;
+}
+
+.booking .box{
+    width: 14.5%;
+    text-align: center;
+    padding-top: 15px;
+
+    position: relative;
+}
+
+.booking h3{
+    font-size: 20px;
+    color: #86cff0;
+    margin-bottom: 12px;
+    font-weight: 600;
+    position: relative;
+}
+
+.booking h3 img{
+    width: 16px;
+    margin-left: 10px;
+    position: absolute;
+    top: 4px;
+    left: 150px;
+}
+
+.booking p{
+    color: #fff;
+}
+
+.num{
+    display: flex;
+    justify-content: center;
+}
+
+.num a{
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.num a:first-child{
+    margin-right: 12px;
+}
+
+.num a:last-child{
+    margin-left: 12px;
+}
+
+.line{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.book{
+    width: 90px;
+    height: 54px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #1d3f96;
+    position: absolute;
+    top: 18px;
+    right: 40px;
+}
+
+.book p{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.book:hover{
+    background-color: #86cff0;;
+    color: #1d3f96;
+    
+}
+ 
+
+
+/* calendar */
+.hide{
+    display: none;
+}
+.carOpen .normal{
+    display: block;
+}
+.carOpen.on .normal{
+    display: none;
+}
+.carOpen .active{
+    display: none;
+}
+.carOpen.on .active{
+    display: block;
+}
+.container.flex{
+    position: absolute;
+    display: none;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    position: relative;
+  }
+  /* @learnwithshero  */
+  
+  .calendar {
+    width: 300px;
+    height: 370px;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3),
+      -10px -10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    position: fixed;
+    
+  }
+  
+  .calendar .month {
+    width: 100%;
+    height: 25%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+   
+    background-color: #86cff0;
+    justify-content: space-between !important;
+    text-align: center;
+  }
+  
+  .calendar .month img {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: 0.1s;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+
+  .month img:hover{
+    opacity: 0.8;
+  }
+
+  .month h3{
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  .month h1{
+    margin-top: -20px;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  .month p {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+  }
+  /* @learnwithshero  */
+  .weekdays {
+    width: 100%;
+    margin-top: 15px;
+    /*height: 10%;
+    padding-bottom: 0;*/
+  }
+  
+  .weekdays div {
+    width: calc(200px / 7);
+    height: 80%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: 0.2s;
+  }
+
+  .days{
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .days div{
+    margin-top: -2px;
+    width: calc(270px / 7);
+    height: calc(270px / 7);
+    text-align: center;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+  }
+  
+  .days .previous-days,
+  .days .next-days {
+      color: rgba(0, 0, 0, 0.3);
+  }
+
+  .days .today {
+    color: #86cff0;
+    cursor: pointer;
+  }
+  
+  
+  /* not은 div중에서 .today를 제외한 나머지들  */
+  .days div:not(.today):hover, .days .today:hover{      
+      background-color: #1e44af;
+      cursor: pointer;
+      color: #fff;
+      border-radius: 50%;
+  }
+
+
+
+
+
+/*row1*/
+.row1{
+    width: 713px;
+    height: 268px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100vh;
+
+
+
+    position: relative;
+}
+
+.row1 .con{
+    display: flex;
+    justify-content: space-between;
+  
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    background-color: rgba(0,0,10,0.1);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.row1 .box{
+    width: 33.33%;
+    color: #fff;
+    text-align: center;
+    padding: 60px;
+}
+
+.row1 .con i{
+    font-size: 100px;
+    
+}
+
+.row1 .con p{
+    font-size: 26px;
+    margin-top: 18px;
+}
+
+
+.row1 span{
+    width: 2px;
+    height: 90px;
+    padding-top: 100px;
+}
+
+
+/*row2*/
+.row2{
+    width: 1420px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 84px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.row2 .con{
+    width: 1320px;
+    height: 340px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row2 .con .item{
+    width: 648px;
+}
+
+
+.row2 .starfish{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    animation: bounce 1s infinite alternate ease-in;
+}
+
+@keyframes bounce{
+    0%{transform: translateY(-10px);}
+    100%{transform: translateY(0)}
+}
+
+.row2 .turtle{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    animation-name: width;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    animation: width 1s infinite alternate ease-in;
+}
+
+@keyframes width{
+    0%{transform: translateX(-10px);}
+    100%{transform: translateY(3px)}
+}
+
+
+/*row3*/
+
+.row3{
+    font-size: 0;
+}
+.row3 .box{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    vertical-align: center;
+    background-size: cover;
+}
+
+.row3 .box1{
+    background-image: url(../images/row3-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.row3 .box2{
+    background-image: url(../images/row3-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.row3 .box3{
+    background-image: url(../images/row3-3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.row3 .con{
+    position: relative;
+}
+
+.slick-dots{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+}
+
+.slick-dots button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    text-indent: -9999px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.slick-active button{
+    background-color: #ccc;
+}
+
+/* 
+
+.slick-dots > li > button
+
+모양은 저 버튼한테 주고
+정렬은 li들을 정렬시킨다고 생각
+
+활성화된 것
+
+.slick-active button ㅇ을 수정해주면 활성화된 동그래미 
+
+*/
+
+
+
+
+
+/*footer*/
+footer{
+    width: 100%;
+    height: 185px;
+    background-color: #092171;
+}
+
+.fWrap{
+    width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.fMenu{
+    display: flex;
+    color: #fff;
+    font-size: 16px;
+    padding-top: 40px;
+}
+
+.fMenu p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.fMenu p:first-child{
+    padding-left: 0;
+}
+
+.fMenu .mint{
+    color: #7cf1d6;
+}
+
+.fMenu p::after{
+    content: '|';
+    padding-left: 15px;
+}
+
+.fMenu .mint::after{
+    content: none;
+}
+
+footer span{
+    color: #fff;
+    padding-top: 30px;
+    display: block;
+    font-size: 12px;
+}
+
+address{
+    font-style: normal;
+    color: #fff;
+    font-size: 12px;
+    padding-top: 18px;
+}
+
+.sns{
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+.sns a{
+    margin-left: 12px;
+    width: 40px;
+    height: 40px;
+}
+
+.sns img{
+    width: 100%;
+    height: 100%;
+}
+
+.family{
+    width: 170px;
+    height: 25px;
+    
+    background-color: #1d3f96;
+    font-size: 12px;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    
+    position: relative;
+
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+}
+
+.family .select{
+    padding-top: 0;
+    line-height: 25px;
+    padding-left: 15px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+.family:after{
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    top:5px;
+    font-size: 10px;
+
+}
+
+
+.pop{
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    background-color: #3862bb;
+    width: 100%;
+    line-height: 30px;
+    display: none;
+}
+
+.pop a{
+    display: block;
+    padding-left: 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.family.active:after{
+    transform: rotate(180deg);
+}
+
+.family.active .pop{
+    display: block;
+}
